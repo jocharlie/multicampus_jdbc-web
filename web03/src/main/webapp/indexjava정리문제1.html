@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/out.css">
+
+<script type="text/javascript">
+	function me(){
+		name = document.getElementById("name").value
+		company = document.getElementById("company").value
+		position = document.getElementById("position").value
+		gender = document.getElementById("gender").value
+		total = company +'회사에 ' + position +'으로 있는 ' + name +  '입니다'
+		//'1234' == 1234
+		//'1234'
+		
+		//<div> tag: html의 주요 구성요소(element --> tag))
+		resultTag = document.getElementById("result")
+		//id가 result인 태그를 가지고 와주세요.! <div id=result></div>
+		if(gender =='남자'){
+
+			// total="멀티회사에 팀장으로 있는 홍길동입니다."
+			
+			resultTag.innerHTML = total + '<img src=img/man.png width=200 height=200>'
+		}else{
+			//alert('로그인 실패')
+			//resultTag.innerHTML = '<b>로그인 실패</b>'
+		 	resultTag.innerHTML = total + '<img src=img/woman.png width=200 height=200>'
+		}
+	}
+
+function age(){
+	age1 = parseInt(document.getElementById("year").value)
+	resultTag = document.getElementById("result")
+	resultTag.innerHTML = '나이는 ' + (2023-age1) + '입니다'
+		//alert('나이는 ' + (2023-age1) + '입니다')
+}
+
+function rec(){
+	w1 = parseFloat(document.getElementById("w").value)
+	h1 = parseFloat(document.getElementById("h").value)
+	resultTag = document.getElementById("result")
+	resultTag.innerHTML = '사각형의 넓이는 ' + (w1*h1) + '입니다'
+	//alert('사각형의 넓이는 ' + (w1*h1) + '입니다')
+}
+</script>
+
+</head>
+<body>
+	이름:
+	<input id='name' value='홍길동'>
+	<br> 회사명 :
+	<input id='company' value='멀티'>
+	<br> 직책 :
+	<input id='position' value='팀장'>
+	<br> 성별 :
+	<input id='gender' value='남자/여자'>
+	<br>
+	<button onclick="me()">확인</button>
+
+
+<hr color="red">
+<div id="result" style="color:red; background: yellow; width: 500px; height: 50px; font-size:30px">결과넣는 곳.</div>
+
+</body>
+</html>

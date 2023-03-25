@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"> //만약 js를 js2로 바꾼다면? Failed to load resource: the server responded with a status of 404 ()index7.html:9 Uncaught ReferenceError: $ is not defined
+// at index7.html:9:2
+
+</script>
+<script type="text/javascript">
+	$(function() {  //"body부분을 dom tree로 ram에 읽어와서 준비가 되면!!"
+	//function함수 부분을 실행해주세요.!		
+	//$(선택하는 것)-- 태그명 button, 아이디 #b1, 클래스 .t2
+		
+		$("#b2").click(function() {
+			alert('버튼2를 클릭하셨군요.!!') // 실행할 내용 정의 (함수 정의!!)
+			//태그 사이에 글자가 있는 경우와 input태그 값이 있는 경우는 다르다!
+			t1 = $('#text1').text()
+			alert('가지고 온 값은' + t1)
+		}) //함수라서 괄호로 넣습니다
+		$("#b3").click(function() {
+			alert('버튼3를 클릭하셨군요.!!') // 실행할 내용 정의 (함수 정의!!)
+			t2 = $('#text2').val() //input의 값을
+			alert('가지고 온 값은' + t2)
+		}) //함수라서 괄호로 넣습니다
+		$("#b4").click(function() {
+			alert('버튼4를 클릭하셨군요.!!') // 실행할 내용 정의 (함수 정의!!)
+			//set의 의미!
+			$('#text3').text('내가 들어간다~~야~~')
+			$('#text4').val('나의 id는 hahahahahahahahaha')
+		}) //함수라서 괄호로 넣습니다
+	})
+</script>
+</head>
+<body>
+
+<h3 id="text1">나는 1번의 텍스트...</h3> <br>
+<input id="text2" value="나는 2번의 값..." style="background: yellow"><br>
+
+<h3 id="text3">여기 결과가 들어갈 곳.</h3> <br>
+<input id="text4" style="background: pink"><br>
+
+<button id="b2">push me2</button>
+<button id="b3">push me3</button>
+<button id="b4">push me4</button>
+</body>
+</html>

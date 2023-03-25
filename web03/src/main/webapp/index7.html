@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.6.4.js"> //만약 js를 js2로 바꾼다면? Failed to load resource: the server responded with a status of 404 ()index7.html:9 Uncaught ReferenceError: $ is not defined
+// at index7.html:9:2
+
+</script>
+<script type="text/javascript">
+	$(function() {  //jquery 기본 사용법!
+		//alert("body부분을 dom tree로 ram에 읽어들였음.!!")
+		//document.getElementById("today") ==> $("#today")
+		//콜백함수
+		$("#b1").click(function() {
+			alert('b1이 클릭되었음.') // 실행할 내용 정의 (함수 정의!!)
+		}) //함수라서 괄호로 넣습니다
+		
+	})
+</script>
+</head>
+<body>
+오늘 요일: <input id="today" value="목">
+<button id="b1">주말인지 확인....</button>
+
+</body>
+</html>
